@@ -11,6 +11,7 @@ body {
   background-color: colors.$black;
   color: colors.$white;
   padding: spacing.$space-5 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -43,11 +44,50 @@ a {
     padding: 0 spacing.$space-6;
   }
 
+  &[data-active-index="-1"] {
+    .music-page .return-home {
+      display: flex;
+    }
+  }
+
   &[data-active-index="0"] {
     left: -100%;
   }
 
   &[data-active-index="1"] {
     left: -200%;
+
+    .software-page .return-home {
+      display: flex;
+    }
+  }
+}
+
+.return-home {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+
+  display: none; // overwritten to flex when visible
+  flex-direction: column;
+  justify-content: center;
+
+  padding: spacing.$space-3;
+  font-size: fonts.$larger;
+
+  // cancels inverting-button, looks better
+  border-top: none;
+  border-bottom: none;
+}
+
+.software-page {
+  .return-home {
+    left: 0;
+  }
+}
+
+.music-page {
+  .return-home {
+    right: 0;
   }
 }

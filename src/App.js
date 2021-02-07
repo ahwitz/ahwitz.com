@@ -1,7 +1,9 @@
 import './App.scss';
 import React from 'react';
 
-import {HomePage, NonHomePage} from './components/Page';
+import {HomePage} from './components/Page';
+import {MusicPage} from './components/MusicPage';
+import {SoftwarePage} from './components/SoftwarePage';
 
 export default class App extends React.Component
 {
@@ -29,12 +31,9 @@ export default class App extends React.Component
         </div>
 
         <div className="pages" data-active-index={this.state.activeIndex}>
-          <NonHomePage index={-1} active={false}
-            onSetActive={(idx) => this.onSetActive(idx)}/>
-          <HomePage index={0} active={true}
-            onSetActive={(idx) => this.onSetActive(idx)}/>
-          <NonHomePage index={1} active={false}
-            onSetActive={(idx) => this.onSetActive(idx)}/>
+          <MusicPage onSetActive={(idx) => this.onSetActive(idx)}/>
+          <HomePage onSetActive={(idx) => this.onSetActive(idx)}/>
+          <SoftwarePage onSetActive={(idx) => this.onSetActive(idx)}/>
         </div>
       </div>
     );

@@ -1,14 +1,12 @@
 import React from 'react';
 import LookingFor from './LookingFor';
 
-class Page extends React.Component
+export class Page extends React.Component
 {
   constructor(props)
   {
     super(props);
     this.state = {
-      index: props.index,
-      active: props.active || false,
       onSetActive: props.onSetActive
     };
   }
@@ -51,22 +49,3 @@ export class HomePage extends Page
     );
   }
 }
-
-export class NonHomePage extends Page
-{
-  constructor(props)
-  {
-    super(props);
-  }
-
-  render()
-  {
-    const {index, active} = this.state;
-    return (
-      <div className="page">
-          Index {index}, active {active ? 'true' : 'false'}
-      </div>
-    );
-  }
-}
-
