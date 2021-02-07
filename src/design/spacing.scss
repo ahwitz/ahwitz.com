@@ -1,0 +1,23 @@
+// Based off Egret DS SCSS space variables
+$space-base-unit: 1rem / 4;
+
+$space--2: $space-base-unit / 4;
+$space--1: $space-base-unit / 2;
+$space-1:  $space-base-unit * 1;
+$space-2:  $space-base-unit * 2;
+$space-3:  $space-base-unit * 4;
+$space-4:  $space-base-unit * 8;
+$space-5:  $space-base-unit * 16;
+$space-6:  $space-base-unit * 32;
+
+
+$body-max-width: 1080px;
+
+$home-breakpoint: 600px;
+$hero-breakpoint: 700px;
+
+$header-breakpoint: 850px;
+$footer-breakpoint: 950px;
+$footer-second-breakpoint: 950px;
+
+$border-height: 2px;

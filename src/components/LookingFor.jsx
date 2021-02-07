@@ -9,24 +9,24 @@ export default class LookingFor extends React.Component
     this.state = {
       left: props.left,
       headerText: props.headerText,
-      promptText: props.promptText
+      promptText: props.promptText,
+      link: props.link
     };
   }
 
   render()
   {
-    const {left, headerText, promptText} = this.state;
-    console.log('yeah once', this.state);
+    const {left, headerText, promptText, link} = this.state;
     return (
       <div className={left ? 'looking-for looking-for-left' : 'looking-for looking-for-right'}>
         <div className="looking-for-header">{headerText}</div>
-        <div className="looking-for-prompt">
+        <a className="looking-for-prompt" href={link}>
           {
             left ? <div className="fa fa-chevron-left"></div>
               : <div className="fa fa-chevron-right"></div>
           }
           <p>{promptText}</p>
-        </div>
+        </a>
       </div>
     );
   }

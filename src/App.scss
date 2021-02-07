@@ -1,18 +1,77 @@
 @use './design/colors';
 @use './design/fonts';
+@use './design/spacing';
+
+@import './design/cssreset';
 
 body {
   font-family: 'Yantramanav', sans-serif;
   background-color: colors.$background;
-  color: colors.$font-white;
+  color: colors.$white;
+  padding: spacing.$space-5 spacing.$space-6;
+}
+
+a {
+  color: colors.$blue;
+  text-decoration: none;
 }
 
 .banner-title {
   font-size: fonts.$huge;
   text-align: center;
+  color: colors.$red;
 }
 
 .banner-subtitle {
   font-size: fonts.$larger;
   text-align: center;
+}
+
+.looking-for {
+  display: flex;
+  margin: spacing.$space-6 spacing.$space-5;
+  font-size: fonts.$large;
+
+  &.looking-for-left .looking-for-prompt {
+    order: -1;
+  }
+
+  .looking-for-header {
+    text-align: center;
+    margin: spacing.$space-3 spacing.$space-4;
+  }
+
+  .looking-for-prompt {
+    flex: 1 0 auto;
+    border: colors.$white-border;
+    display: inline-flex;
+    align-items: center;
+
+    p {
+      padding: spacing.$space-3 spacing.$space-4;
+      padding-left: 0;
+      position: relative;
+      top: -1px; // centers with chevron
+    }
+
+    .fa {
+      padding: spacing.$space-3 spacing.$space-4;
+    }
+  }
+}
+
+.other-horwitzes {
+  border-top: colors.$white-border;
+  padding-top: spacing.$space-5;
+
+  .other-horwitzes-header {
+    font-size: fonts.$large;
+    text-align: center;
+  }
+
+  .looking-for {
+    // overwrite because they're as important (^:
+    margin: spacing.$space-5;
+    font-size: fonts.$normal-plus;
+  }
 }
