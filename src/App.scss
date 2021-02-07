@@ -1,0 +1,18 @@
+@use './design/colors';
+@use './design/fonts';
+
+body {
+  font-family: 'Yantramanav', sans-serif;
+  background-color: colors.$background;
+  color: colors.$font-white;
+}
+
+.banner-title {
+  font-size: fonts.$huge;
+  text-align: center;
+}
+
+.banner-subtitle {
+  font-size: fonts.$larger;
+  text-align: center;
+}

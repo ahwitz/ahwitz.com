@@ -1,0 +1,205 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/*height: 100%;*/
+	position: relative;
+}
+
+
+/*
+	Header CSS
+*/
+#header {
+	font-family: 'Merriweather', serif;
+	position: fixed;
+	top: 0;
+	height: 3em;
+	background-color: #DDD;
+	width: 100%;
+	padding: 0% 10%;
+	box-sizing: border-box;
+	z-index: 2;
+}
+
+#header-page-title {
+	float: left;
+	height: 3em;
+	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 2em;
+	color: #9E0508;
+}
+
+#header-subpages {
+	float: right;
+	height: 3em;
+	color: #555;
+}
+
+.header-scrollto {
+	float: right;
+	font-size: 1em;
+	line-height: 3em;
+	padding: 0em 0.75em;
+	height: 100%;
+}
+
+.header-scrollto:not(:first-child) {
+	border-right: thin grey solid;
+}
+
+.header-scrollto:hover {
+	background-color: #BBB;
+	cursor: pointer;
+}
+
+.header-scrollto:active {
+	background-color: #999;
+	cursor: pointer;
+}
+
+/*
+	Body CSS
+*/
+#body {
+	font-family: 'Yantramanav', sans-serif;
+	position: relative;
+	top: 3em;
+	padding: 0% 10%;
+	box-sizing: border-box;
+}
+
+.body-section {
+	color: #555;
+	padding: 1.5em 0 1.25em 0;
+}
+
+.body-section:not(:first-child) {
+	border-top: thin #9E0508 solid;
+}
+
+.section-header {
+	font-size: 3em;
+	margin-bottom: 0.25em;
+	text-align: center;
+	color: #9E0508;
+	font-weight: 700;
+}
+
+.section-subheader {
+	color: #222;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.list-left {
+	list-style: none;
+	position: relative;
+}
+
+.list-left li {
+	margin: 0.5em 0;
+}
+
+.list-left li:not(:last-child):after {
+	content: "";
+	display: block;
+	border-bottom: thin #9E0508 solid;
+	width: 10%;
+	margin: 0 45%;
+	padding-top: 0.5em;
+}
+
+#section-bio {
+	text-align: center;
+}
+
+#section-bio .bio-block-link {
+	display: block;
+}
+
+#section-bio .body-subsection {
+	margin: 2em 10vw;
+}
+
+.header-subsection-header {
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 1em;
+}
+
+.body-subsection {
+	margin-top: 2em;
+	margin: 2em 0;
+}
+
+.body-subsection-header {
+	font-weight: 700;
+	text-align: center;
+	font-size: 1.2em;
+	color: #222;
+}
+
+.composition-wrapper {
+	margin: 1.25em;
+	position: relative;
+}
+
+.composition-wrapper .composition-title {
+	/*color: #9E0508;*/
+}
+
+.composition-wrapper .fa {
+	position: absolute;
+	left: -1.25em;
+	top: 0;
+	color: #9E0508;
+	cursor: pointer;
+}
+
+.composition-wrapper .fa-chevron-right {
+	left: -1em;
+	top: 0.05em;
+}
+
+.composition-wrapper .piece-description {
+	display: none;
+	opacity: 0;
+}
+
+#footer {
+	text-align: center;
+}
+
+#footer-sub {
+	font-size: 0.2em;
+}
+
+
+/* Mobile shim */
+@media all and (max-width: 800px) { 
+	#header {
+  		height: 3em;
+  		padding: 0 0 0 1em;
+  	}
+
+  	#body {
+  		padding: 0% 4%;
+  	}
+  	.header-scrollto .fa {
+  		padding: 1em 0;
+  	}
+  	.scrollto-text {
+  		display: none;
+  	}
+
+  	#section-bio .body-subsection {
+  		margin: 2em 0;
+  	}
+}
+
+
