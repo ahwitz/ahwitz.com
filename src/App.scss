@@ -4,11 +4,13 @@
 
 @import './design/cssreset';
 
+@import './design/components/homepage.scss';
+
 body {
   font-family: 'Yantramanav', sans-serif;
   background-color: colors.$black;
   color: colors.$white;
-  padding: spacing.$space-5 spacing.$space-6;
+  padding: spacing.$space-5 0;
 }
 
 a {
@@ -27,69 +29,25 @@ a {
   text-align: center;
 }
 
-.looking-for {
+.pages {
+  width: 300%;
   display: flex;
-  align-items: center;
-  padding: spacing.$space-5;
-  font-size: fonts.$large;
+  flex-direction: row;
 
-  &:not(:first-child) {
-    padding-top: 0;
+  position: relative;
+  left: 0;
+  transition: left 0.5s;
+
+  .page {
+    width: 100%;
+    padding: 0 spacing.$space-6;
   }
 
-  &.looking-for-left .looking-for-prompt {
-    order: -1;
-
-    p {
-      padding-right: spacing.$space-4;
-    }
+  &[data-active-index="0"] {
+    left: -100%;
   }
 
-  &.looking-for-right .looking-for-prompt {
-    p {
-      padding-left: spacing.$space-4;
-    }
-    .fa {
-      order: 2;
-    }
-  }
-  
-  .looking-for-header {
-    text-align: center;
-    margin: spacing.$space-3 spacing.$space-4;
-  }
-
-  .looking-for-prompt {
-    padding: spacing.$space-2;
-    flex: 1 0 auto;
-    display: inline-flex;
-    align-items: center;
-
-    p {
-      padding: spacing.$space-3 0;
-      position: relative;
-      top: -1px; // centers with chevron
-    }
-
-    .fa {
-      padding: spacing.$space-3 spacing.$space-4;
-    }
-  }
-}
-
-.other-horwitzes {
-  border-top: colors.$white-border;
-  padding-top: spacing.$space-5;
-
-  .other-horwitzes-header {
-    font-size: fonts.$large;
-    text-align: center;
-    padding-bottom: spacing.$space-4;
-  }
-
-  .looking-for {
-    // overwrite because they're as important (^:
-    padding: spacing.$space-4;
-    font-size: fonts.$normal-plus;
+  &[data-active-index="1"] {
+    left: -200%;
   }
 }

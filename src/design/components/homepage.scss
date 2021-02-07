@@ -1,0 +1,67 @@
+
+.looking-for {
+    display: flex;
+    align-items: center;
+    padding: spacing.$space-5;
+    font-size: fonts.$large;
+  
+    &:not(:first-child) {
+      padding-top: 0;
+    }
+  
+    &.looking-for-left .looking-for-prompt {
+      order: -1;
+  
+      p {
+        padding-right: spacing.$space-4;
+      }
+    }
+  
+    &.looking-for-right .looking-for-prompt {
+      p {
+        padding-left: spacing.$space-4;
+      }
+      .fa {
+        order: 2;
+      }
+    }
+    
+    .looking-for-header {
+      text-align: center;
+      margin: spacing.$space-3 spacing.$space-4;
+    }
+  
+    .looking-for-prompt {
+      padding: spacing.$space-2;
+      flex: 1 0 auto;
+      display: inline-flex;
+      align-items: center;
+  
+      p {
+        padding: spacing.$space-3 0;
+        position: relative;
+        top: -1px; // centers with chevron
+      }
+  
+      .fa {
+        padding: spacing.$space-3 spacing.$space-4;
+      }
+    }
+  }
+  
+  .other-horwitzes {
+    border-top: colors.$white-border;
+    padding-top: spacing.$space-5;
+  
+    .other-horwitzes-header {
+      font-size: fonts.$large;
+      text-align: center;
+      padding-bottom: spacing.$space-4;
+    }
+  
+    .looking-for {
+      // overwrite because they're as important (^:
+      padding: spacing.$space-4;
+      font-size: fonts.$normal-plus;
+    }
+  }

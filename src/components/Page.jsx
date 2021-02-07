@@ -7,13 +7,20 @@ class Page extends React.Component
   {
     super(props);
     this.state = {
-      active: props.active
+      index: props.index,
+      active: props.active || false,
+      onSetActive: props.onSetActive
     };
   }
 }
 
 export class HomePage extends Page
 {
+  constructor(props)
+  {
+    super(props);
+  }
+
   render()
   {
     return (
@@ -21,11 +28,11 @@ export class HomePage extends Page
         <LookingFor left={true}
           headerText="Information about purchasing/accessing compositions, upcoming performances..."
           promptText="Music"
-          link="/#music"/>
+          onLinkClick={() => this.state.onSetActive(-1)}/>
         <LookingFor left={false}
           headerText="Information about consulting, development projects, work history..."
           promptText="Software"
-          link="/#software"/>
+          onLinkClick={() => this.state.onSetActive(1)}/>
 
         <div className="other-horwitzes">
           <div className="other-horwitzes-header">In case I&apos;m too good at SEO and you were looking for:</div>
@@ -40,6 +47,24 @@ export class HomePage extends Page
             promptText="Other Andrew Horwitz"
             link="https://andrewhorwitz.com/"/>
         </div>
+      </div>
+    );
+  }
+}
+
+export class NonHomePage extends Page
+{
+  constructor(props)
+  {
+    super(props);
+  }
+
+  render()
+  {
+    const {index, active} = this.state;
+    return (
+      <div className="page">
+          Index {index}, active {active ? 'true' : 'false'}
       </div>
     );
   }
