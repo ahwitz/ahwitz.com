@@ -1,7 +1,59 @@
-$background: #1E1E1E;
-
+$black: #1E1E1E;
 $white: #DDD;
 $red: #9E0508;
 $blue: #0B6788;
 
-$white-border: thin $white solid;
+$white-border: 2px $white solid;
+
+.inverting-button {
+    display: inline-block;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    color: $blue;
+    border: $white-border;
+
+    position: relative;
+    &:before, &:after {
+        display: inline-block;
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    z-index: 3;
+
+    &:before {
+        content: ' ';
+        height: 0px;
+        z-index: -1;
+
+        background-color: $white;
+        transition: height 0.25s;
+    }
+
+    &:after {
+        height: 100%;
+        z-index: -2;
+        background-color: $black;
+    }
+
+    &:hover {
+        &:before {
+            height: 100%;
+        }
+    }
+
+    &:active, &:focus {
+        border: $white-border;
+
+        &:before {
+            height: 100%;
+            background-color: $white;
+        }
+    }
+}

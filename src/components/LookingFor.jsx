@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 export default class LookingFor extends React.Component
 {
@@ -20,7 +19,7 @@ export default class LookingFor extends React.Component
     return (
       <div className={left ? 'looking-for looking-for-left' : 'looking-for looking-for-right'}>
         <div className="looking-for-header">{headerText}</div>
-        <a className="looking-for-prompt" href={link}>
+        <a className="looking-for-prompt inverting-button" href={link}>
           {
             left ? <div className="fa fa-chevron-left"></div>
               : <div className="fa fa-chevron-right"></div>
