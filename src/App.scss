@@ -5,12 +5,12 @@
 @import './design/cssreset';
 
 @import './design/components/homepage.scss';
+@import './design/components/composition.scss';
 
 body {
   font-family: 'Yantramanav', sans-serif;
   background-color: colors.$black;
   color: colors.$white;
-  padding: spacing.$space-5 0;
   overflow-x: hidden;
 }
 
@@ -20,6 +20,7 @@ a {
 }
 
 .banner-title {
+  padding-top: spacing.$space-5;
   font-size: fonts.$huge;
   text-align: center;
   color: colors.$red;
@@ -39,11 +40,6 @@ a {
   left: 0;
   transition: left 0.5s;
 
-  .page {
-    width: 100%;
-    padding: 0 spacing.$space-6;
-  }
-
   &[data-active-index="-1"] {
     .music-page .return-home {
       display: flex;
@@ -60,6 +56,21 @@ a {
     .software-page .return-home {
       display: flex;
     }
+  }
+}
+
+.page {
+  width: 100%;
+  padding: 0 spacing.$space-6;
+
+  .page-header {
+    color: colors.$red;
+    font-size: fonts.$larger;
+    padding: spacing.$space-5 0 spacing.$space-3; 
+  }
+
+  p {
+    padding: spacing.$space-3 0;
   }
 }
 

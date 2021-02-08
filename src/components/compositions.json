@@ -1,0 +1,131 @@
+[
+  {
+    "title": "Senior Privileges (quartet)",
+    "year": "2009",
+    "info": [
+      "Original blues.",
+      "Low brass quartet (recording has three trombones and baritone sax).",
+      "Difficulty: Medium (solo in 1st trombone, 1st trombone goes up to Bb4)"
+    ],
+    "recordings": {
+      "http://ahwitz.com/media/seniorpriv.mp3": "MP3 recording available."
+    }
+  },
+  {
+    "title": "A Sinfonian Medley",
+    "year": "2010",
+    "info": [
+      "Arrangement of songs from the Phi Mu Alpha songbook.",
+      "Standard instrumentation.",
+      "Difficulty: Hard (no improvisation, lead trumpet goes up to Eb6)"
+    ],
+    "recordings": {
+      "https://www.youtube.com/watch?v=2LlDtWIaHa4": "Video recording available."
+    }
+  },
+  {
+    "title": "Cherokee",
+    "year": "2011",
+    "info": [
+      "Arrangement, written for Clay Jenkins and the Ithaca College Jazz Ensemble.",
+      "Standard instrumentation or solo 5th trumpet.",
+      "Difficulty: Hard (improv in 2nd or 5th trumpet, alto, lead trumpet goes up to F6)"
+    ],
+    "recordings": {
+      "http://ahwitz.com/media/cherokee.mp3": "MP3 recording available."
+    }
+  },
+  {
+    "title": "Mine Again",
+    "year": "2011",
+    "info": [
+      "Alto saxophone, baritone voice, piano.",
+      "Difficulty: Medium for voice(G2-E4), easy for sax, piano.",
+      "Unperformed. MIDI recording available upon request."
+    ]
+  },
+  {
+    "title": "Sonatina for Baritone Saxophone and Piano",
+    "year": "2011",
+    "info": [
+      "Baritone saxophone, piano.",
+      "Difficulty: Hard (sax up to written A6)",
+      "Unperformed. MIDI recording available upon request."
+    ],
+    "recordings": {
+      "https://www.youtube.com/watch?v=fhF1nLCfegM": "Video recording available.",
+      "http://ahwitz.com/media/baripiano.mp3": "Better-quality audio recording of same performance."
+    },
+    "purchase": {
+      "http://www.amazon.com/Sonatina-Baritone-Saxophone-Andrew-Horwitz/dp/B00821SXKI/": "Music available through Dorn Publications."
+    }
+  },
+  {
+    "title": "Chanukah Klezmer Medley for Saxophone Quartet",
+    "year": "2011",
+    "info": [
+      "SATB saxophones.",
+      "Difficulty: Hard (optional improv in SAT saxophones)"
+    ],
+    "recordings": {
+      "http://www.youtube.com/watch?v=_FBBReWM00k": "Original video recording.",
+      "https://www.youtube.com/watch?v=vvEn6lnJ9-4": "Recording by Navy Band Northwest."
+    }
+  },
+  {
+    "title": "Three Klezmer Dances",
+    "year": "2012",
+    "info": [
+      "Alto saxophone, cello, piano.",
+      "Difficulty: Hard for sax, piano (sax up to written C7), \"This may be one of the hardest pieces I&apos;ve ever played.\" for cello."
+    ],
+    "recordings": {
+      "http://ahwitz.com/media/klezmer1.m4a": "M4A recording of first movement available.",
+      "http://ahwitz.com/media/klezmer2.m4a": "M4A recording of second movement available.",
+      "http://ahwitz.com/media/klezmer3.m4a": "M4A recording of third movement available."
+    }
+  },
+  {
+    "title": "Fresca",
+    "year": "2012",
+    "info": [
+      "Original latin song, written for the Canton Central High School Jazz Band.",
+      "Standard instrumentation, opt. french horn part for 4th trumpet or 1st trombone.",
+      "Difficulty: Easy/Medium (bossa improv in low reed and piano, samba improv in alto, lead trumpet goes up to A5)",
+      "MIDI recording available by request."
+    ]
+  },
+  {
+    "title": "Senior Privileges (big band)",
+    "year": "2012",
+    "info": [
+      "Arrangement of low brass quartet above, original blues.",
+      "Standard instrumentation.",
+      "Difficulty: Medium/Hard (improv in trumpet 2, large sax soli, lead trumpet goes up to Db6)",
+      "MIDI recording available by request."
+    ]
+  },
+  {
+    "title": "When The Saints Go Marching In",
+    "year": "2013",
+    "info": [
+      "Arrangement, written for John and Bob Sneider and the Ithaca College Jazz Ensemble.",
+      "Standard instrumentation, opt. solo 5th trumpet, opt. solo guitar.",
+      "Difficulty: Hard (improv in solo parts and drumset, lead trumpet goes up to F6)"
+    ],
+    "recordings": {
+      "http://ahwitz.com/media/saints.mp3": "MP3 recording available."
+    }
+  },
+  {
+    "title": "Pages From an American Cookbook",
+    "year": "2014",
+    "info": [
+      "Commissioned by Janice Murphy, clarinetist with the U.S. Marine Band",
+      "Soprano Bb clarinet, acoustic bass."
+    ],
+    "recordings": {
+      "https://www.youtube.com/watch?v=RFdPsO2cMIs": "Video recording available"
+    }
+  }
+]

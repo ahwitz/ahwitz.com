@@ -1,0 +1,22 @@
+.composition {
+  padding: spacing.$space-4 0;
+  
+  &:nth-child(even) {
+    text-align: right;
+  }
+}
+
+.composition-title {
+  font-size: fonts.$normal-plus;
+  color: colors.$red;
+  padding-bottom: spacing.$space-1;
+}
+
+.composition-info-line {
+  margin: spacing.$space-2 0;
+}
+
+.composition-link {
+  display: inline-block;
+  padding-bottom: spacing.$space-2;
+}

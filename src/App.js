@@ -17,7 +17,6 @@ export default class App extends React.Component
 
   onSetActive(index)
   {
-    console.log('setting to', index);
     this.setState({activeIndex: index});
   }
 
@@ -27,7 +26,7 @@ export default class App extends React.Component
       <div className="App">
         <div className="banner">
           <p className="banner-title">ahwitz - Andrew Horwitz</p>
-          <p className="banner-subtitle">composer/full-stack developer</p>
+          <p className="banner-subtitle">composer/software engineer</p>
         </div>
 
         <div className="pages" data-active-index={this.state.activeIndex}>

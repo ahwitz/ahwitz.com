@@ -1,5 +1,8 @@
 {
-    "editor.codeActionsOnSave": {
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "eslint.validate": ["javascript", "json"]
