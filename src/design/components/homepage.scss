@@ -2,7 +2,7 @@
 .looking-for {
     display: flex;
     align-items: center;
-    padding: spacing.$space-5;
+    padding: spacing.$space-5 spacing.$space-4;
     font-size: fonts.$large;
   
     &:not(:first-child) {

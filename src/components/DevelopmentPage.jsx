@@ -2,7 +2,7 @@ import React from 'react';
 import {Page} from './Page';
 
 
-export class SoftwarePage extends Page
+export class DevelopmentPage extends Page
 {
   constructor(props)
   {
@@ -17,7 +17,8 @@ export class SoftwarePage extends Page
           onClick={() => this.state.onSetActive(0)}>
           <span className="fa fa-chevron-left"></span>
         </a>
-          Software page
+
+        <div className="page-header">Development</div>
       </div>
     );
   }

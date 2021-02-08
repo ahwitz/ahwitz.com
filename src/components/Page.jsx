@@ -22,14 +22,14 @@ export class HomePage extends Page
   render()
   {
     return (
-      <div className="page">
+      <div className="page home-page">
         <LookingFor left={true}
           headerText="Information about purchasing/accessing compositions, upcoming performances..."
           promptText="Music"
           onLinkClick={() => this.state.onSetActive(-1)}/>
         <LookingFor left={false}
           headerText="Information about consulting, development projects, work history..."
-          promptText="Software"
+          promptText="Development"
           onLinkClick={() => this.state.onSetActive(1)}/>
 
         <div className="other-horwitzes">

@@ -3,7 +3,7 @@ import React from 'react';
 
 import {HomePage} from './components/Page';
 import {MusicPage} from './components/MusicPage';
-import {SoftwarePage} from './components/SoftwarePage';
+import {DevelopmentPage} from './components/DevelopmentPage';
 
 export default class App extends React.Component
 {
@@ -17,6 +17,10 @@ export default class App extends React.Component
 
   onSetActive(index)
   {
+    // scroll back to the top before triggering the change animation
+    window.scrollTo({
+      top: 0
+    });
     this.setState({activeIndex: index});
   }
 
@@ -32,7 +36,7 @@ export default class App extends React.Component
         <div className="pages" data-active-index={this.state.activeIndex}>
           <MusicPage onSetActive={(idx) => this.onSetActive(idx)}/>
           <HomePage onSetActive={(idx) => this.onSetActive(idx)}/>
-          <SoftwarePage onSetActive={(idx) => this.onSetActive(idx)}/>
+          <DevelopmentPage onSetActive={(idx) => this.onSetActive(idx)}/>
         </div>
       </div>
     );

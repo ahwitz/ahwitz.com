@@ -32,35 +32,74 @@ a {
 }
 
 .pages {
-  width: 300%;
+  width: 100%;
   display: flex;
   flex-direction: row;
 
   position: relative;
-  left: 0;
-  transition: left 0.5s;
 
   &[data-active-index="-1"] {
+    .music-page {
+      z-index: 2;
+    }
+
+    .home-page, .software-page {
+      left: 100%;
+    }
+
     .music-page .return-home {
       display: flex;
+    }
+
+    .home-page, .software-page {
+      position: fixed;
     }
   }
 
   &[data-active-index="0"] {
-    left: -100%;
+    .home-page {
+      z-index: 2;
+    }
+
+    .music-page {
+      left: -100%;
+    }
+
+    .software-page {
+      left: 100%;
+    }
+
+    .music-page, .software-page {
+      position: fixed;
+    }
   }
 
   &[data-active-index="1"] {
-    left: -200%;
+    .software-page {
+      z-index: 2;
+    }
+
+    .home-page, .music-page {
+      left: -100%;
+    }
 
     .software-page .return-home {
       display: flex;
+    }
+
+    .music-page, .home-page {
+      position: fixed;
     }
   }
 }
 
 .page {
+  z-index: -1;
+  left: 0;
+  position: relative;
+  transition: left 0.5s;
   width: 100%;
+  max-width: 100%;
   padding: 0 spacing.$space-6;
 
   .page-header {
@@ -75,6 +114,10 @@ a {
 }
 
 .return-home {
+  // Hide things below
+  background: colors.$black;
+  z-index: 3;
+
   position: fixed;
   top: 0;
   height: 100vh;
