@@ -7,17 +7,22 @@
 @import './design/components/homepage.scss';
 @import './design/components/composition.scss';
 
+$page-padding: calc((100vw - 1000px) / 2);
+$return-home-offset: calc(#{$page-padding} - #{spacing.$space-6});
+
 body {
   z-index: 0;
   font-family: 'Yantramanav', sans-serif;
   background-color: colors.$black;
   color: colors.$white;
   display: flex;
-  justify-content: space-around;;
+  justify-content: space-around;
+  overflow-x: hidden;
 }
 
 .App {
   width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -39,61 +44,88 @@ a {
 
 .pages {
   transition: left 0.5s;
-  width: 300vw;
-  max-width: 300vw;
-  min-width: 300vw;
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
   display: flex;
   flex-direction: row;
 
   position: relative;
 
   &[data-active-index="-1"] {
-    left: 0;
+    .music-page {
+      left: 0;
+      
+      .return-home {
+        right: $return-home-offset;
+      }
+    }
 
     .home-page {
-      position: absolute;
-      // left: 100vw;
+      position: fixed;
+      left: 100vw;
     }
     
     .development-page {
-      position: absolute;
-      // left: 200vw;
+      position: fixed;
+      left: 200vw;
+
+      .return-home {
+        left: calc(#{$return-home-offset} + 200vw);
+      }
     }
 
     .music-page .return-home {
-      display: flex;
+      right: $return-home-offset;
+      position: fixed;
     }
   }
 
   &[data-active-index="0"] {
-    left: -100vw;
-
     .music-page {
-      position: absolute;
-      // left: -100vw;
+      position: fixed;
+      left: -100vw;
+
+      .return-home {
+        right: calc(#{$return-home-offset} + 100vw);
+      }
+    }
+
+    .home-page {
+      left: 0;
     }
     
     .development-page {
-      position: absolute;
-      // left: 100vw;
+      position: fixed;
+      left: 100vw;
+
+      .return-home {
+        left: calc(#{$return-home-offset} + 100vw);
+      }
     }
   }
 
   &[data-active-index="1"] {
-    left: -200vw;
-
     .music-page {
-      position: absolute;
-      // left: -200vw;
+      position: fixed;
+      left: -200vw;
+
+      .return-home {
+        right: calc(#{$return-home-offset} + 200vw);
+      }
     }
     
     .home-page {
-      position: absolute;
-      // left: -100vw;
+      position: fixed;
+      left: -100vw;
     }
 
-    .development-page .return-home {
-      display: flex;
+    .development-page {
+      left: 0;
+      
+      .return-home {
+        left: $return-home-offset;
+      }
     }
   }
 }
@@ -103,14 +135,18 @@ a {
   position: relative;
   display: flex;
   width: 100vw;
-  padding: 0 calc((100vw - 1000px) / 2);
+  padding: 0 $page-padding;
+
+  &.music-page {
+    left: -100vw;
+  }
 
   &.home-page {
-    left: 100vw;
+    left: 0;
   }
 
   &.development-page {
-    left: 200vw;
+    left: 100vw;
   }
 
   .page-header {
@@ -129,32 +165,22 @@ a {
 }
 
 .return-home {
+  transition: left 0.5s, right 0.5s;
+
   // Hide things below
   background: colors.$black;
   z-index: 3;
 
-  position: sticky;
-  top: -2px;
+  position: fixed;
+  border-top: none;
+  border-bottom: none;
+  top: 0vh;
   height: 100vh;
 
-  display: none; // overwritten to flex when visible
+  display: flex;
   flex-direction: column;
   justify-content: center;
 
   padding: spacing.$space-3;
   font-size: fonts.$larger;
-}
-
-.development-page {
-  .return-home {
-    margin-right: spacing.$space-4;
-    left: 0;
-  }
-}
-
-.music-page {
-  .return-home {
-    margin-left: spacing.$space-4;
-    right: 0;
-  }
 }
