@@ -12,13 +12,15 @@ export class DevelopmentPage extends Page
   render()
   {
     return (
-      <div className="page software-page">
+      <div className="page development-page">
         <a className="return-home inverting-button"
           onClick={() => this.state.onSetActive(0)}>
           <span className="fa fa-chevron-left"></span>
         </a>
 
-        <div className="page-header">Development</div>
+        <div className="page-content">
+          <div className="page-header">Development</div>
+        </div>
       </div>
     );
   }

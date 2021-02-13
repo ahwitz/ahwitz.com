@@ -20,18 +20,19 @@ export class MusicPage extends Page
 
     return (
       <div className="page music-page">
+        <div className="page-content">
+          <div className="page-header">Compositions</div>
+
+          <p>I haven&apos;t had a reason to update this page for a long time, but there&apos;s a very good chance it&apos;s why you&apos;re here.</p>
+
+          <p>Send me an email if you want a copy of any of these. I&apos;ll probably give it to you in exchange for asking for a recording if you ever make one. Only piece here that&apos;s not only self-published is the Sonatina for Baritone Saxophone, which has hard-copy information available below.</p>
+
+          {compsLocal}
+        </div>
         <a className="return-home inverting-button"
           onClick={() => this.state.onSetActive(0)}>
           <span className="fa fa-chevron-right"></span>
         </a>
-
-        <div className="page-header">Compositions</div>
-
-        <p>I haven&apos;t had a reason to update this page for a long time, but there&apos;s a very good chance it&apos;s why you&apos;re here.</p>
-
-        <p>Send me an email if you want a copy of any of these. I&apos;ll probably give it to you in exchange for asking for a recording if you ever make one. Only piece here that&apos;s not only self-published is the Sonatina for Baritone Saxophone, which has hard-copy information available below.</p>
-
-        {compsLocal}
       </div>
     );
   }

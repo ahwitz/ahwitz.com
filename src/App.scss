@@ -8,10 +8,16 @@
 @import './design/components/composition.scss';
 
 body {
+  z-index: 0;
   font-family: 'Yantramanav', sans-serif;
   background-color: colors.$black;
   color: colors.$white;
-  overflow-x: hidden;
+  display: flex;
+  justify-content: space-around;;
+}
+
+.App {
+  width: 100vw;
 }
 
 a {
@@ -32,80 +38,89 @@ a {
 }
 
 .pages {
-  width: 100%;
+  transition: left 0.5s;
+  width: 300vw;
+  max-width: 300vw;
+  min-width: 300vw;
   display: flex;
   flex-direction: row;
 
   position: relative;
 
   &[data-active-index="-1"] {
-    .music-page {
-      z-index: 2;
-    }
+    left: 0;
 
-    .home-page, .software-page {
-      left: 100%;
+    .home-page {
+      position: absolute;
+      // left: 100vw;
+    }
+    
+    .development-page {
+      position: absolute;
+      // left: 200vw;
     }
 
     .music-page .return-home {
       display: flex;
     }
-
-    .home-page, .software-page {
-      position: fixed;
-    }
   }
 
   &[data-active-index="0"] {
-    .home-page {
-      z-index: 2;
-    }
+    left: -100vw;
 
     .music-page {
-      left: -100%;
+      position: absolute;
+      // left: -100vw;
     }
-
-    .software-page {
-      left: 100%;
-    }
-
-    .music-page, .software-page {
-      position: fixed;
+    
+    .development-page {
+      position: absolute;
+      // left: 100vw;
     }
   }
 
   &[data-active-index="1"] {
-    .software-page {
-      z-index: 2;
+    left: -200vw;
+
+    .music-page {
+      position: absolute;
+      // left: -200vw;
+    }
+    
+    .home-page {
+      position: absolute;
+      // left: -100vw;
     }
 
-    .home-page, .music-page {
-      left: -100%;
-    }
-
-    .software-page .return-home {
+    .development-page .return-home {
       display: flex;
-    }
-
-    .music-page, .home-page {
-      position: fixed;
     }
   }
 }
 
 .page {
-  z-index: -1;
-  left: 0;
-  position: relative;
   transition: left 0.5s;
-  width: 100%;
-  max-width: 100%;
-  padding: 0 spacing.$space-6;
+  position: relative;
+  display: flex;
+  width: 100vw;
+  padding: 0 calc((100vw - 1000px) / 2);
+
+  &.home-page {
+    left: 100vw;
+  }
+
+  &.development-page {
+    left: 200vw;
+  }
 
   .page-header {
     color: colors.$red;
     font-size: fonts.$larger;
     padding: spacing.$space-5 0 spacing.$space-3; 
+  }
+
+  .page-content {
+    flex: 1 1 auto;
   }
 
   p {
@@ -118,8 +133,8 @@ a {
   background: colors.$black;
   z-index: 3;
 
-  position: fixed;
-  top: 0;
+  position: sticky;
+  top: -2px;
   height: 100vh;
 
   display: none; // overwritten to flex when visible
@@ -128,20 +143,18 @@ a {
 
   padding: spacing.$space-3;
   font-size: fonts.$larger;
-
-  // cancels inverting-button, looks better
-  border-top: none;
-  border-bottom: none;
 }
 
-.software-page {
+.development-page {
   .return-home {
+    margin-right: spacing.$space-4;
     left: 0;
   }
 }
 
 .music-page {
   .return-home {
+    margin-left: spacing.$space-4;
     right: 0;
   }
 }
