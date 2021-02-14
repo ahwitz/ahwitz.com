@@ -7,6 +7,7 @@ module.exports = {
     'plugin:react/recommended'
   ],
   globals: {
+    process: true,
     module: true
   },
   parserOptions: {

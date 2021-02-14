@@ -1,0 +1,56 @@
+[
+  {
+    "title": "EGRET",
+    "screenshots": [
+      "/assets/portfolio-mgg.png",
+      "/assets/portfolio-rme.png"
+    ],
+    "info": [
+      "Content management, search, and delivery system built primarily off MarkLogic.",
+      "Implemented several levels of identity and institutional access management systems, including a SAML service provider.",
+      "Architected delivery and management components, worked with external firm for  design of the delivery component.",
+      "Refined deployment process for content updates so that new content updates (as well as new server deployments) required minimal developer effort.",
+      "Links below are two products served using two different deployments of the same code."
+    ],
+    "links": {
+      "https://www.mgg-online.com": "MGG Online",
+      "https://rme.rilm.org": "RILM Music Encyclopedias"
+    }
+  },
+  {
+    "title": "RILM Informational Website",
+    "screenshots": ["/assets/portfolio-rilm.png"],
+    "info": [
+      "Spearheaded conversion of old, entirely custom PHP site to WordPress to make development easier and reduce developer hours spent on content updates.",
+      "Built off wireframes and design prototypes built by an external design firm.",
+      "Built prototypes for making internal content publicly searchable via WordPress to facilitate SEO."
+    ],
+    "links": {
+      "https://www.rilm.org": "rilm.org"
+    }
+  },
+  {
+    "title": "RIPM Jazz Periodicals",
+    "screenshots": ["/assets/portfolio-ripm.png"],
+    "info": [
+      "Brought in to expedite launch of a delivery interface.",
+      "Implemented external design, optimized and modernized old client code and build systems.",
+      "Provided security, budget, and development advice for planning the future of this and other similar digitization projects."
+    ],
+    "links": {
+      "https://jazz.ripmfulltext.org": "RIPM Jazz Periodicals"
+    }
+  },
+  {
+    "title": "Fordham IP Institute",
+    "screenshots": ["/assets/portfolio-fordham.png"],
+    "info": [
+      "Maintained, modernized, and cleaned up existing WordPress website.",
+      "Worked to minimize developer expenses by making website more easily editable by administrative staff.",
+      "Advised and assisted with implementation and use of external event management systems."
+    ],
+    "links": {
+      "https://www.fordhamipinstitute.com": "Fordham IP Institute"
+    }
+  }
+]
