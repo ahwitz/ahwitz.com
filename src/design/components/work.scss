@@ -1,16 +1,18 @@
 .work {
   padding: spacing.$space-4 0;
   
-  &:nth-child(even) {
-    text-align: right;
+  @media (min-width: 601px) {
+    &:nth-child(even) {
+      text-align: right;
 
-    .work-screenshots {
-      order: -1;
-    }
+      .work-screenshots {
+        order: -1;
+      }
 
-    ul {
-      padding-left: spacing.$space-3;
-      padding-right: 0;
+      ul {
+        padding-left: spacing.$space-3;
+        padding-right: 0;
+      }
     }
   }
 }
@@ -56,5 +58,12 @@
 
   li {
     padding: spacing.$space-2 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .work-body {
+    flex-wrap: wrap;
   }
 }

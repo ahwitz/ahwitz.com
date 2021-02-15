@@ -1,8 +1,10 @@
 .composition {
   padding: spacing.$space-4 0;
   
-  &:nth-child(even) {
-    text-align: right;
+  @media (min-width: 700px) {
+    &:nth-child(even) {
+      text-align: right;
+    }
   }
 }
 

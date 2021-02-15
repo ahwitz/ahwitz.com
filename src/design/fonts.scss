@@ -1,5 +1,12 @@
-$huge: 4rem;
-$larger: 3rem;
-$large: 2rem;
-$normal-plus: 1.3rem;
-$normal: 1rem;
+$huge: 4em;
+$larger: 3em;
+$large: 2em;
+$normal-plus: 1.3em;
+$normal: 1em;
+
+// Scale down everything at 800px
+@media (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+}

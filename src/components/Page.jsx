@@ -25,11 +25,11 @@ export class HomePage extends Page
       <div className="page home-page">
         <div className="page-content">
           <LookingFor left={true}
-            headerText="Information about purchasing/accessing compositions, upcoming performances..."
+            headerText="Information about purchasing and accessing compositions, or recent attempts at making music..."
             promptText="Music"
             onLinkClick={() => this.state.onSetActive(-1)}/>
           <LookingFor left={false}
-            headerText="Information about consulting, development projects, work history..."
+            headerText="Information about consulting, contracting, and my past development projects and work history..."
             promptText="Development"
             onLinkClick={() => this.state.onSetActive(1)}/>
 
